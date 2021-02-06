@@ -139,7 +139,55 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SampleProject.cpp" />
+    <ClCompile Include="1-1.cpp" />
+    <ClCompile Include="1-2.cpp" />
+    <ClCompile Include="1-3.cpp" />
+    <ClCompile Include="1-6.cpp" />
+    <ClCompile Include="average_analysis.cpp" />
+    <ClCompile Include="birthdayCandles.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="camelCase.cpp" />
+    <ClCompile Include="catsAndAMouse.cpp" />
+    <ClCompile Include="countingValleys.cpp" />
+    <ClCompile Include="dayOfTheProgramer.cpp" />
+    <ClCompile Include="did_all_hw.cpp" />
+    <ClCompile Include="findURLs.cpp" />
+    <ClCompile Include="framingName.cpp" />
+    <ClCompile Include="framingName2.cpp" />
+    <ClCompile Include="helloWorld.cpp" />
+    <ClCompile Include="1-5.cpp" />
+    <ClCompile Include="1-4.cpp" />
+    <ClCompile Include="erase.cpp" />
+    <ClCompile Include="iterateThroughMap+PrintOut.cpp" />
+    <ClCompile Include="makingAnagrams.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="median.cpp" />
+    <ClCompile Include="median_analysis.cpp" />
+    <ClCompile Include="MigratoryBirds.cpp" />
+    <ClCompile Include="numberLineJumps%28Kangaroo%29.cpp" />
+    <ClCompile Include="MedianChap3.cpp" />
+    <ClCompile Include="miniMaxSum.cpp" />
+    <ClCompile Include="optimistic_median_analysis.cpp" />
+    <ClCompile Include="separateStudents.cpp" />
+    <ClCompile Include="simpleArraySum.cpp" />
+    <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="splitString.cpp" />
+    <ClCompile Include="stairCase.cpp" />
+    <ClCompile Include="studentGradesChap3.cpp" />
+    <ClCompile Include="grade.cpp" />
+    <ClCompile Include="Student_info.cpp" />
+    <ClCompile Include="superReducedString.cpp" />
+    <ClCompile Include="Swap.cpp" />
+    <ClCompile Include="write_analysis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="did_all_hw.h" />
+    <ClInclude Include="grade.h" />
+    <ClInclude Include="median.h" />
+    <ClInclude Include="median_analysis.h" />
+    <ClInclude Include="Student_info.h" />
+    <ClInclude Include="write_analysis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

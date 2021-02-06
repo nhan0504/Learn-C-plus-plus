@@ -1,20 +1,57 @@
-// SampleProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include<iostream>
+#include<ios>
+#include<iomanip>
+#include<vector>
+#include<algorithm>
+#include<vector>
+#include "median.h"
+#include "grade.h"
+#include "Student_info.h"
+using namespace std;
 
-#include <iostream>
+int main() {
+	cout << "Please enter your first name: ";
+	string name;
+	cin >> name;
+	cout << "Hello, " << name << "!";
 
-int main()
-{
-    std::cout << "Hello World!\n";
+	cout << "Please enter your midterm and final exam grades:";
+	double midterm, final;
+	cin >> midterm >> final;
+
+	cout << "Enter all your homework grades, followed by end-of-file: ";
+	vector<double> homework;
+
+	read_hw(cin, homework);
+	try {
+		double final_grade = grade(midterm, final, homework);
+		streamsize prec = cout.precision();
+		cout << "Your final grade is " << setprecision(3) << final_grade << setprecision(prec) << endl;
+	}
+	catch (domain_error) {
+		cout << endl << "You must enter your grades. Please try again" << endl;
+		return 1;
+	}
+	
+	vector<Student_info> students;
+	Student_info record;
+	string::size_type maxlen = 0;
+	while (read(cin, record)) {
+		maxlen = max(maxlen, record.name.size());
+		students.push_back(record);
+	}
+	sort(students.begin(), students.end(), compare);
+	for (vector<Student_info>::size_type i = 0; i != students.size(); i++) {
+		cout << students[i].name << string(maxlen + 1 - students[i].name.size(), ' ');
+		try {
+			double final_grade = grade(students[i]);
+			streamsize prec = cout.precision();
+			cout << setprecision(3) << final_grade << setprecision(prec);
+		}
+		catch (domain_error e) {
+			cout << e.what();
+		}
+		cout << endl;
+	}
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
