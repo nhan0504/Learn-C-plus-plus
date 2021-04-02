@@ -1,3 +1,20 @@
+/*
+int i, j
+i = 0
+j = i + 1
+int size = a.size
+int dis = 0;
+int res;
+while (i != size && j != size)
+    if (a[i] == a[j]){
+        dis = j - i;
+        if (dis < res) -> res = dis
+        i++
+        j = i + 1
+    }
+    else -> j++
+return res
+*/
 int minimumDistances(vector<int> a) {
     vector<int>::size_type i, j;
     i = 0;
@@ -27,7 +44,7 @@ int minimumDistances(vector<int> a) {
             j++;
         }
         //No match to a[i] -> move i++
-        if (j = size) {
+        if (j == size) {
             i++;
             j = i + 1;
         }
